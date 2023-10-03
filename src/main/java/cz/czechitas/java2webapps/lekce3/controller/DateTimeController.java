@@ -40,8 +40,10 @@ public class DateTimeController {
    * @return Sdružený objekt obsahující model a informace o view.
    */
   @GetMapping("/datum")
-  public String datum() {
-    return "index";
+  public ModelAndView datum() {
+    ModelAndView result = new ModelAndView("datum");
+    result.addObject("datum", LocalDate.now().format(DATE_FORMATTER));
+    return result;
   }
 
   /**
@@ -50,7 +52,9 @@ public class DateTimeController {
    * @return Sdružený objekt obsahující model a informace o view.
    */
   @GetMapping("/cas")
-  public String cas() {
-    return "index";
+  public ModelAndView cas() {
+    ModelAndView result = new ModelAndView("cas");
+    result.addObject("cas", LocalTime.now().format(TIME_FORMATTER));
+    return result;
   }
 }

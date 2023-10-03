@@ -3,7 +3,7 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Datum a čas</title>
+    <title>Čas</title>
     [#include "_common/head.ftlh"]
 </head>
 <body>
@@ -22,7 +22,7 @@
         </ul>
     </header>
     <div class="px-4 py-5 my-5 text-center">
-        <div>Vyberte si, zda chcete zobrazit datum nebo čas.</div>
+        <h1>${cas}</h1>
     </div>
 </div>
 </body>
